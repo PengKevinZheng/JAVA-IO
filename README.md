@@ -17,7 +17,7 @@ C. always useful unless proven otherwise
 
 For Streams:
    1. InputStream vs OutputStream
-    InputStream is used for many things that you read from.
+    a.InputStream is used for many things that you read from.
     ex: an method that can read from an existing file(read byte one by one):
     
       public static void printlnHex(String fileName) throws IOException{
@@ -53,7 +53,7 @@ For Streams:
 	}
 		
 
-    OutputStream is used for many things that you write to.
+   b. OutputStream is used for many things that you write to.
     
     ex: FileOutputStream out = new FileOutputStream("/Users/KevinZheng/Documents/workspace/JavaIO/KevinZheng.txt");
       //write single bytes into file
@@ -63,7 +63,7 @@ For Streams:
 			byte[] gbk = "China".getBytes("gbk");
 			out.write(gbk);
 			
-	Copy a scrfile to a desfile:
+    c.Copy a scrfile to a desfile:
 	
 	public static void copyFile(File srcfile, File desfile) throws IOException{
 		if(!srcfile.exists()){
