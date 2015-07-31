@@ -62,3 +62,26 @@ For Streams:
 			//write byte array into file
 			byte[] gbk = "China".getBytes("gbk");
 			out.write(gbk);
+			
+	Copy a scrfile to a desfile:
+	
+	public static void copyFile(File srcfile, File desfile) throws IOException{
+		if(!srcfile.exists()){
+			throw new IllegalArgumentException("file" + srcfile + "does not exist.");
+		}
+		
+		if(!srcfile.isFile()){
+			throw new IllegalArgumentException( srcfile + "is not a file");
+		}
+		
+		@SuppressWarnings("resource")
+		FileInputStream in = new FileInputStream(srcfile);
+		@SuppressWarnings("resource")
+		FileOutputStream out = new FileOutputStream(desfile);
+		byte[] buf = new byte[8*1024];
+		int b;
+		while((b=in.read(buf,0, buf.length))!=-1){
+			out.write(buf, 0, b);
+		}
+		
+	}
