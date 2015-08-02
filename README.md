@@ -2,18 +2,16 @@
 
 A. Streams
 
-byte oriented stream (8 bit)
-good for binary data such as a Java .class file
-good for "machine-oriented"
+byte oriented stream (8 bit)；
+good for binary data such as a Java .class file；
+good for "machine-oriented"；
 
 B. Readers/Writers
 
-char (utf-16) oriented stream (16 bit)
-good for text such as a Java source
-good for "human-oriented" data
-Buffered
+char (utf-16) oriented stream (16 bit)；
+good for text such as a Java source；
+good for "human-oriented" data；
 
-C. always useful unless proven otherwise
 
 For Streams:
    1. InputStream vs OutputStream
@@ -85,3 +83,5 @@ For Streams:
 		}
 		
 	}
+	
+	
