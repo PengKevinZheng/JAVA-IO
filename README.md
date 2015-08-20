@@ -24,6 +24,8 @@ For Streams:
 
     ex: an method that can read from an existing file(read byte one by one):
     
+      		
+      		
       		public static void printlnHex(String fileName) throws IOException{
       
 		//convert file into a stream and do read operation
