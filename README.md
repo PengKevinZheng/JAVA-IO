@@ -58,6 +58,7 @@ For Streams:
 	}
 	
 	an method that can read form an existing file(read by bytes array)
+	
 	public static void printlnHexByByteArray(String fileName) throws IOException{
 		
 			FileInputStream in = new FileInputStream(fileName);
