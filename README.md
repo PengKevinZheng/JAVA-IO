@@ -3,37 +3,58 @@
 A. Streams
 
 byte oriented stream (8 bit)；
+
 good for binary data such as a Java .class file；
+
 good for "machine-oriented"；
 
 B. Readers/Writers
 
 char (utf-16) oriented stream (16 bit)；
+
 good for text such as a Java source；
+
 good for "human-oriented" data；
 
 
 For Streams:
    1. InputStream vs OutputStream
+   
     a.InputStream is used for many things that you read from.
+
     ex: an method that can read from an existing file(read byte one by one):
     
       public static void printlnHex(String fileName) throws IOException{
+      
 		//convert file into a stream and do read operation
+		
 		FileInputStream in = new FileInputStream(fileName);
+		
 		int b;
+		
 		int i =1;
+		
 		while((b=in.read())!=-1){
+		
 		//	System.out.println(b);
+		
 		//	System.out.println("16Hex");
+		
 			
 			System.out.println(Integer.toHexString(b)+ " ");
+			
 			System.out.println("println i");
+			
 			if(i++%10==0){
+			
 				System.out.println();
+				
 			}
+			
 		}
+		
 		 in.close();
+		 
 	}
 	
 	an method that can read form an existing file(read by bytes array)
